@@ -1,0 +1,30 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+flask-script = "*"
+flask-bootstrap = "*"
+flask-moment = "*"
+flask-wtf = "*"
+flask-sqlalchemy = "*"
+flask-shell = "*"
+flask-migrate = "*"
+flask-mail = "*"
+flask-login = "*"
+email-validator = "*"
+forgerypy = "*"
+flask-pagedown = "*"
+markdown = "*"
+bleach = "*"
+flask-httpauth = "*"
+httpie = "*"
+coverage = "*"
+selenium = "*"
+
+[requires]
+python_version = "3.6"
