@@ -77,8 +77,8 @@ class ProductionConfig(Config):
 
 
 class HerokuConfig(ProductionConfig):
-	SSL_DISABLE = bool(os.environ.get('SSL_DISABLE'))
-
+	#SSL_DISABLE = bool(os.environ.get('SSL_DISABLE'))
+	SSL_REDIRECT = True if os.environ.get('DYNO') else False
 	
 	@classmethod
 	def init_app(cls, app):
@@ -87,7 +87,7 @@ class HerokuConfig(ProductionConfig):
 		# handle proxy server headers
 		from werkzeug.contrib.fixers import ProxyFix
 		app.wsgi_app = ProxyFix(app.wsgi_app)
-		
+
 		# log to stderr
 		import logging
 		from logging import StreamHandler
