@@ -29,12 +29,12 @@ def create_app(config_name):
 	db.init_app(app)
 	login_manager.init_app(app)
 	pagedown.init_app(app)
-
+'''
 	if app.config['SSL_REDIRECT']:
 		from flask_sslify import SSLify
 		sslify = SSLify(app)
-
-	#from app import models
+'''
+	from app import models
 
 	from .main import main as main_blueprint
 	app.register_blueprint(main_blueprint)
