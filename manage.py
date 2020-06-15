@@ -56,7 +56,7 @@ def profile(length=25, profile_dir=None):
 	app.run()
 
 
-@manager.command
+@app.cli.command()
 def deploy():
 	"""Run deployment tasks."""
 	from flask_migrate import upgrade
