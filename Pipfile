@@ -27,6 +27,7 @@ coverage = "*"
 selenium = "*"
 gunicorn = "*"
 foreman = "*"
+werkzeug = "==0.16.0"
 
 [requires]
 python_version = "3.6"
