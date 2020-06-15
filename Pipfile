@@ -26,6 +26,7 @@ httpie = "*"
 coverage = "*"
 selenium = "*"
 gunicorn = "*"
+foreman = "*"
 
 [requires]
 python_version = "3.6"

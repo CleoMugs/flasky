@@ -30,8 +30,12 @@ def create_app(config_name):
 	login_manager.init_app(app)
 	pagedown.init_app(app)
 
-    from app import models
-  
+	if not app.debug and not app.testing and not app.config['SSL_DISABLE']:
+		from flask_sslify import SSLify
+		sslify = SSLify(app)
+
+	from app import models
+
 	from .main import main as main_blueprint
 	app.register_blueprint(main_blueprint)
 

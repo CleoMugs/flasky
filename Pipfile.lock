@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bb1699b5f0ebb2b877f64b86d9a042bab49686baead0dbd4f179f1c667ede390"
+            "sha256": "b8fcf80320e41f57c9368ef9b3b37758c920ca3e4ebc7a57a84dae6384c789b1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -212,6 +212,13 @@
             "index": "pypi",
             "version": "==0.14.3"
         },
+        "foreman": {
+            "hashes": [
+                "sha256:a717ec5ca58b70760be948499061eda18acdf7c21782b478389cbfedc98fcf7c"
+            ],
+            "index": "pypi",
+            "version": "==0.9.7"
+        },
         "forgerypy": {
             "hashes": [
                 "sha256:c5968979f57068cf153156bc8b940a4670ac7059487ed7b9bb03995d79c0f552"
@@ -371,6 +378,12 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "version": "==2.23.0"
+        },
+        "requests-futures": {
+            "hashes": [
+                "sha256:35547502bf1958044716a03a2f47092a89efe8f9789ab0c4c528d9c9c30bc148"
+            ],
+            "version": "==1.0.0"
         },
         "selenium": {
             "hashes": [
