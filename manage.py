@@ -1,4 +1,22 @@
 import os
+
+from dotenv import load_dotenv
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(dotenv_path):
+		load_dotenv(dotenv_path)
+
+
+COV = None
+if os.environ.get('FLASK_COVERAGE'):
+	import coverage
+	COV = coverage.coverage(branch=True, include='app/*')
+	COV.start()	
+
+
+
+
+
 import sys
 from app import create_app, db
 from app.models import User, Follow, Comment, Permission, Post, Role
@@ -10,14 +28,8 @@ migrate = Migrate(app, db)
 manager = Manager(app)
 
 def make_shell_context():
-	return dict(app=app, db=db, User=User, Role=Role)
-
-
-COV = None
-if os.environ.get('FLASK_COVERAGE'):
-	import coverage
-	COV = coverage.coverage(branch=True, include='app/*')
-	COV.start()	
+	return dict(app=app, db=db, User=User, Role=Role, 
+				Permission=Permission, Post=Post, Comment=Comment)
 
 
 
